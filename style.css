@@ -1,0 +1,180 @@
+/* General body & background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: linear-gradient(#1e3c72, #2a5298);
+    position: relative;
+}
+
+/* Header & nav */
+header {
+    background: rgba(0,0,0,0.6);
+    padding: 15px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover { text-decoration: underline; }
+
+/* Main content */
+main {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px 5px;
+    background-color: #ff6600;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.btn:hover {
+    background-color: #e55b00;
+    transform: scale(1.05);
+}
+
+/* Affiliate section */
+.affiliate { margin: 30px auto; }
+
+/* Contact form */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6600;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.contact-form button:hover { background-color: #e55b00; transform: scale(1.03); }
+
+/* Timer for game */
+#timerDisplay { font-size: 20px; margin-bottom: 10px; }
+
+/* Mobile controls */
+.mobile-controls button {
+    padding: 12px 18px;
+    margin: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+.mobile-controls button:hover { background: rgba(255,255,255,0.4); }
+
+/* Animated waves background */
+.ocean {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    z-index:1;
+    overflow:hidden;
+}
+.wave {
+    position: absolute;
+    width:200%;
+    height:200%;
+    background: rgba(255,255,255,0.05);
+    border-radius: 43%;
+    animation: waveMove 20s linear infinite;
+}
+.wave:nth-child(2) { animation-duration: 25s; top: 20%; left: -10%; }
+.wave:nth-child(3) { animation-duration: 30s; top: 40%; left: -5%; }
+
+@keyframes waveMove {
+    0% { transform: translateX(0) translateY(0) rotate(0deg);}
+    50% { transform: translateX(-50px) translateY(20px) rotate(10deg);}
+    100% { transform: translateX(0) translateY(0) rotate(0deg);}
+}
+
+/* Blog & Privacy Pages */
+.blog-container, .privacy-container {
+    max-width: 900px;
+    margin: 80px auto;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+.blog-container h2, .privacy-container h2, .privacy-container h1 {
+    color: #007bff;
+}
+.blog-container p, .privacy-container p, .privacy-container li {
+    color: #333;
+    line-height: 1.6;
+}
+.blog-container article {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+.blog-container a, .privacy-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+.blog-container a:hover, .privacy-container a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 600px){
+    canvas { width: 95%; height: auto; }
+    .mobile-controls button { width: 22%; margin: 3px; }
+    .blog-container, .privacy-container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 20px;
+    }
+}
